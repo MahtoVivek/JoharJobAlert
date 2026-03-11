@@ -40,3 +40,11 @@ if (tocList) {
     tocList.appendChild(li);
   });
 }
+
+      const toggleBtn = document.querySelector('.menu-toggle');
+      const navLinks = document.querySelector('#main-nav-links');
+      toggleBtn?.addEventListener('click', () => {
+        const isOpen = navLinks.classList.toggle('open');
+        toggleBtn.setAttribute('aria-expanded', String(isOpen));
+      });
+    
